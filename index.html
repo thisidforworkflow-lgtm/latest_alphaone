@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha One — Elite On‑Demand Security</title>
+    <meta name="description" content="Alpha One: The on‑demand marketplace for elite private security and concierge protection. Join the waitlist for exclusive early access."
+ />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Core palette */
+        :root {
+            --black: #0a0a0a;
+            --black-2: #111;
+            --red: #C8102E;
+            --red-2: #8e0f22;
+            --white: #FFFFFF;
+            --soft: #D9D9D9;
+            --muted: #7A7A7A;
+            --card: #0f0f0f;
+            --focus-ring: 0 0 0 3px rgba(200,16,46,0.35);
+ }
+
+        /* Base & Reset */
+        *, *::before, *::after { box-sizing: border-box;
+ }
+        html, body { height: 100%; margin: 0;
+ }
+        body {
+            font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+ color: var(--white);
+            background: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+ }
+        .container { width: min(1200px, 90%); margin-inline: auto;
+ }
+        a { color: inherit; text-decoration: none;
+ }
+        h1, h2, h3, h4, p { margin: 0;
+ }
+
+        /* Enhanced Background Storytelling */
+        .hero-bg-story {
+            position: absolute;
+ inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(45deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
+ }
+
+        /* Animated Grid Pattern */
+        .grid-pattern {
+            position: absolute;
+ top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(200,16,46,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200,16,46,0.03) 1px, transparent 1px);
+ background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+            opacity: 0.6;
+ }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0);
+ }
+            100% { transform: translate(60px, 60px);
+ }
+        }
+
+        /* Floating Security Shields */
+        .security-shields {
+            position: absolute;
+ width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .shield {
+            position: absolute;
+ width: 40px;
+            height: 40px;
+            opacity: 0.1;
+            animation: float 8s ease-in-out infinite;
+ }
+
+        .shield:nth-child(1) { top: 20%; left: 10%; animation-delay: -0s; animation-duration: 12s;
+ }
+        .shield:nth-child(2) { top: 60%; left: 80%; animation-delay: -2s; animation-duration: 10s;
+ }
+        .shield:nth-child(3) { top: 30%; left: 70%; animation-delay: -4s; animation-duration: 14s;
+ }
+        .shield:nth-child(4) { top: 80%; left: 20%; animation-delay: -6s; animation-duration: 9s;
+ }
+        .shield:nth-child(5) { top: 10%; left: 60%; animation-delay: -8s; animation-duration: 11s;
+ }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg);
+ opacity: 0.1; }
+            25% { transform: translateY(-20px) rotate(90deg);
+ opacity: 0.2; }
+            50% { transform: translateY(0px) rotate(180deg);
+ opacity: 0.1; }
+            75% { transform: translateY(20px) rotate(270deg);
+ opacity: 0.15; }
+        }
+
+        /* Radar Sweep Effect */
+        .radar-sweep {
+            position: absolute;
+ top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+ background: conic-gradient(from 0deg, transparent 0deg, rgba(200,16,46,0.1) 30deg, transparent 60deg);
+            animation: radarSweep 6s linear infinite;
+ }
+
+        @keyframes radarSweep {
+            0% { transform: translate(-50%, -50%) rotate(0deg);
+ }
+            100% { transform: translate(-50%, -50%) rotate(360deg);
+ }
+        }
+
+        /* Pulsing Energy Rings */
+        .energy-rings {
+            position: absolute;
+ top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .energy-ring {
+            position: absolute;
+ border: 2px solid rgba(200,16,46,0.3);
+            border-radius: 50%;
+            animation: pulseRing 4s ease-in-out infinite;
+ }
+
+        .energy-ring:nth-child(1) {
+            width: 300px;
+ height: 300px;
+            margin-left: -150px;
+            margin-top: -150px;
+            animation-delay: 0s;
+        }
+
+        .energy-ring:nth-child(2) {
+            width: 500px;
+ height: 500px;
+            margin-left: -250px;
+            margin-top: -250px;
+            animation-delay: 1s;
+        }
+
+        .energy-ring:nth-child(3) {
+            width: 700px;
+ height: 700px;
+            margin-left: -350px;
+            margin-top: -350px;
+            animation-delay: 2s;
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.8);
+ opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.3;
+ }
+            100% { transform: scale(1.4); opacity: 0;
+ }
+        }
+
+        /* Digital Rain Effect */
+        .digital-rain {
+            position: absolute;
+ top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+ }
+
+        .rain-column {
+            position: absolute;
+ top: -100%;
+            color: rgba(200,16,46,0.4);
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 12px;
+            animation: digitalRain 8s linear infinite;
+ }
+
+        @keyframes digitalRain {
+            0% { top: -100%;
+ opacity: 0; }
+            10% { opacity: 1;
+ }
+            90% { opacity: 1;
+ }
+            100% { top: 100%; opacity: 0;
+ }
+        }
+
+        /* Mouse Follower Spotlight */
+        .spotlight {
+            position: fixed;
+ width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(200,16,46,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: screen;
+ transition: transform 0.1s ease-out;
+ }
+
+        /* Utility Classes with Enhanced Animations */
+        .btn {
+            display: inline-flex;
+ align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 1rem 1.8rem;
+            border-radius: 999px;
+ transition: all 0.3s ease;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+            overflow: hidden;
+ }
+
+        .btn::before {
+            content: '';
+ position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+ transition: left 0.5s ease;
+ }
+
+        .btn:hover::before {
+            left: 100%;
+ }
+
+        .btn.primary {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-2) 100%);
+ color: var(--white);
+            box-shadow: 0 6px 24px rgba(200, 16, 46, 0.35);
+ }
+
+        .btn.primary:hover {
+            transform: translateY(-3px) scale(1.02);
+ box-shadow: 0 15px 35px rgba(200, 16, 46, 0.5);
+        }
+
+        .btn.ghost {
+            background: transparent;
+ color: var(--white);
+            border: 1px solid var(--red);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn.ghost:hover {
+            background: rgba(200, 16, 46, 0.15);
+ transform: translateY(-2px);
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            position: relative;
+ min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 0;
+            background: var(--black);
+ }
+
+        .hero-content {
+            position: relative;
+ z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: heroEntrance 1.2s ease-out;
+ }
+
+        @keyframes heroEntrance {
+            0% { 
+                opacity: 0;
+ transform: translateY(50px) scale(0.95);
+            }
+            100% { 
+                opacity: 1;
+ transform: translateY(0) scale(1);
+            }
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+ font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--soft) 50%, var(--white) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+ animation: textShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%;
+ }
+            50% { background-position: 100% 50%;
+ }
+        }
+
+        .hero-brand {
+            display: flex;
+ align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 800;
+ }
+
+        .hero-brand .logo {
+            width: 48px;
+ height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            border: 1px solid var(--red);
+ box-shadow: 
+                inset 0 0 24px rgba(200,16,46,.25),
+                0 0 20px rgba(200,16,46,.3);
+ animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% { box-shadow: inset 0 0 24px rgba(200,16,46,.25), 0 0 20px rgba(200,16,46,.3);
+ }
+            100% { box-shadow: inset 0 0 36px rgba(200,16,46,.4), 0 0 30px rgba(200,16,46,.5);
+ }
+        }
+
+        /* Interactive Elements on Scroll */
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+ }
+
+        /* Enhanced Form Section */
+        .form-section {
+            min-height: 100vh;
+ display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 4rem 0;
+            position: relative;
+ }
+
+        .form-section::before {
+            content: '';
+ position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(200,16,46,0.02) 50%, transparent 100%);
+ }
+
+        .form-card {
+            background: linear-gradient(135deg, rgba(200,16,46,.08) 0%, rgba(200,16,46,.03) 100%);
+ border: 1px solid rgba(200,16,46,.35);
+            border-radius: 16px;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            width: min(100%, 600px);
+ box-shadow: 
+                0 10px 40px rgba(0,0,0,.35),
+                0 0 0 1px rgba(200,16,46,.1) inset;
+ position: relative;
+            backdrop-filter: blur(10px);
+            animation: cardEntrance 0.8s ease-out;
+        }
+
+        @keyframes cardEntrance {
+            0% { 
+                opacity: 0;
+ transform: translateY(30px) rotateX(5deg);
+            }
+            100% { 
+                opacity: 1;
+ transform: translateY(0) rotateX(0deg);
+            }
+        }
+
+        /* Enhanced Input Focus Effects */
+        input, select, textarea {
+            background: rgba(17,17,17,0.8);
+ color: var(--white);
+            border: 1px solid rgba(200,16,46,.35);
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+ backdrop-filter: blur(5px);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--red);
+ box-shadow: 
+                var(--focus-ring),
+                0 0 20px rgba(200,16,46,0.2);
+ transform: scale(1.02);
+        }
+
+        /* Form Step Transitions */
+        .form-step {
+            display: none;
+ flex-direction: column;
+            animation: slideInRight 0.5s ease-out forwards;
+        }
+
+        .form-step.active { 
+            display: flex;
+ }
+
+        .form-step.anim-out { 
+            animation: slideOutLeft 0.5s ease-out forwards;
+ }
+
+        @keyframes slideInRight {
+            0% { 
+                opacity: 0;
+ transform: translateX(30px) rotateY(5deg);
+            }
+            100% { 
+                opacity: 1;
+ transform: translateX(0) rotateY(0deg);
+            }
+        }
+
+        @keyframes slideOutLeft {
+            0% { 
+                opacity: 1;
+ transform: translateX(0) rotateY(0deg);
+            }
+            100% { 
+                opacity: 0;
+ transform: translateX(-30px) rotateY(-5deg);
+            }
+        }
+
+        /* Enhanced Progress Bar */
+        .progress-bar {
+            height: 6px;
+ background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(200,16,46,0.1) 100%);
+            border-radius: 3px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            position: relative;
+ }
+
+        .progress {
+            height: 100%;
+ background: linear-gradient(90deg, var(--red) 0%, #ff4757 100%);
+            width: 0;
+            border-radius: 3px;
+            transition: width 0.6s ease-out;
+            position: relative;
+            overflow: hidden;
+ }
+
+        .progress::after {
+            content: '';
+ position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+ animation: progressShimmer 2s ease-in-out infinite;
+ }
+
+        @keyframes progressShimmer {
+            0% { left: -100%;
+ }
+            100% { left: 100%;
+ }
+        }
+
+        /* Rest of the original styles... */
+        .tag {
+            display: inline-block;
+ border: 1px solid var(--red);
+            color: var(--soft);
+            padding: 0.35rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.02em;
+ }
+
+        .form-header { text-align: center; margin-bottom: 1.5rem;
+ }
+        .form-header h2 { font-size: 1.8rem; font-weight: 900;
+ }
+
+        .field {
+            display: flex;
+ flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+        label {
+            font-weight: 700;
+ font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: var(--soft);
+        }
+
+        .form-actions {
+            display: flex;
+ justify-content: flex-end;
+            margin-top: 1.5rem;
+        }
+        .form-actions .btn { min-width: 150px;
+ }
+        .error-message {
+            color: var(--red);
+ font-size: 0.9rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .consent-text { color: var(--muted); font-size: 0.9rem;
+ }
+        .consent { display: flex; gap: 0.6rem; align-items: flex-start; margin: 1rem 0;
+ }
+        .consent input { margin-top: 0.28rem;
+ }
+        .consent a { color: var(--red);
+ }
+
+        .footer-cta {
+            position: relative;
+ display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border: 1px solid rgba(200,16,46,.35);
+            border-radius: 20px;
+            padding: 1.2rem;
+ background: linear-gradient(135deg, rgba(200,16,46,.08) 0%, rgba(200,16,46,.03) 100%);
+            margin-top: 5rem;
+            backdrop-filter: blur(5px);
+ }
+        .footer-cta p { color: var(--soft);
+ }
+        .footer-cta .btn { min-width: 150px;
+ }
+
+        /* Confirmation page */
+        .confirmation {
+            text-align: center;
+ animation: fadeIn 0.8s ease-in-out;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+ }
+        .confirmation h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+ margin-bottom: 1rem;
+            color: var(--red);
+        }
+        .confirmation p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+ color: var(--soft);
+        }
+        .confirmation .btn { margin-top: 2rem;
+ }
+
+        /* Success Animation */
+        .success-animation {
+            width: 150px;
+ height: 150px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .success-animation svg.check {
+            width: 100%;
+ height: 100%;
+            transform: scale(0.6) translate(-20%, -20%);
+            stroke: var(--red);
+            stroke-width: 4;
+            fill: none;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+ animation: drawCheck 0.8s ease-in-out forwards 0.2s;
+        }
+        .success-animation .bg-circle {
+            position: absolute;
+ top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            background-color: rgba(200, 16, 46, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+ animation: scaleUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0;
+ transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0);
+ }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1;
+ transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px);
+ }
+        }
+        @keyframes drawCheck {
+            from { stroke-dashoffset: 100;
+ }
+            to { stroke-dashoffset: 0;
+ }
+        }
+        @keyframes scaleUp {
+            from { transform: scale(0.8);
+ opacity: 0; }
+            to { transform: scale(1); opacity: 1;
+ }
+        }
+
+        /* Footer */
+        footer {
+            border-top: 2px solid var(--red);
+ background: #080808;
+            padding: 1.6rem 0;
+            color: var(--soft);
+        }
+        .foot {
+            display: flex;
+ justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .foot a { color: var(--soft);
+ }
+        .foot a:hover { color: var(--white);
+ }
+        .modal {
+            position: fixed;
+ inset: 0;
+            background: rgba(0,0,0,.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 70;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+ }
+        .modal.open { display: flex; opacity: 1;
+ }
+        .modal .sheet {
+            background: #0b0b0b;
+ border: 1px solid rgba(200,16,46,.35);
+            border-radius: 16px;
+            padding: 1.5rem;
+            max-width: 720px;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+ }
+        .modal.open .sheet { transform: scale(1);
+ }
+
+        @media (max-width: 640px) {
+            .hero-content h1 { font-size: 3rem;
+ }
+            .energy-ring:nth-child(1) { width: 200px; height: 200px; margin-left: -100px;
+ margin-top: -100px; }
+            .energy-ring:nth-child(2) { width: 300px; height: 300px;
+ margin-left: -150px; margin-top: -150px; }
+            .energy-ring:nth-child(3) { width: 400px;
+ height: 400px; margin-left: -200px; margin-top: -200px; }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+/* --- Services Section (New) Styles --- */
+/* --- Dynamic Horizon Services Section Styles --- */
+/* --- Dynamic Horizon Services Section Styles (Modified for Background Images) --- */
+.dynamic-horizon-services {
+    position: relative;
+    background-color: transparent;
+    /* Main background color */
+    padding: 100px 0;
+    /* Vertical padding */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    /* Important for horizontal scrolling and transitions */
+    border-top: 5px double #C8102E;
+}
+
+.services-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Background image with overlay and parallax */
+    /* If this specific overlay needs a background image, you'll need to lazy load it separately using JS or keep it as CSS background if it's critical. */
+    background-attachment: fixed;
+    z-index: 0;
+    /* Behind all content */
+    filter: brightness(0.6);
+    /* Subtle darkening */
+}
+
+.services-content-wrapper-horizon {
+    position: relative;
+    z-index: 1;
+    /* Above background overlay */
+    max-width: 1400px;
+    /* Overall content width */
+    margin: 0 auto;
+    padding: 0 5%;
+    /* Horizontal padding for the main content wrapper */
+}
+
+.dynamic-horizon-services h2 {
+    font-size: 3.5em;
+    color: #C8102E;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+    opacity: 0;
+    /* Initial state for animation */
+    animation: slideInTop 0.8s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+.dynamic-horizon-services h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background-color: #C8102E;
+    border-radius: 2.5px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dynamic-horizon-services h2:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.services-intro-horizon {
+    font-size: 1.1em;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    line-height: 1.7;
+    opacity: 0;
+    /* Initial state for animation */
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.horizon-container {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+    padding-bottom: 20px;
+    /* Space for scrollbar */
+    cursor: grab;
+    /* Indicate draggable */
+    margin: 0 -5%;
+    /* Pull to edges to allow full width scrolling */
+    padding-left: 2%;
+    /* Add back padding for content */
+    padding-right: 2%;
+}
+
+/* Custom Scrollbar (Webkit browsers) */
+.horizon-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizon-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.horizon-container::-webkit-scrollbar-thumb {
+    background: rgba(239, 183, 144, 0.5);
+    /* Orange/gold thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.horizon-container::-webkit-scrollbar-thumb:hover {
+    background: #C8102E;
+    /* Brighter on hover */
+}
+
+.horizon-track {
+    display: flex;
+    gap: 20px;
+    /* Space between service blocks */
+    align-items: stretch;
+    /* Ensure blocks stretch to same height */
+    padding-bottom: 10px;
+    /* Prevents content from being hidden by scrollbar */
+}
+
+.service-block-horizon {
+    flex-shrink: 0;
+    /* Prevent blocks from shrinking */
+    width: 320px;
+    /* Initial compact width */
+    height: 400px;
+    /* Fixed height for consistency */
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Initial background color, will be covered by image */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(239, 183, 144, 0.2);
+    position: relative;
+    /* Needed for absolute positioning of background image */
+    overflow: hidden;
+    /* Hide overflowing content initially */
+    cursor: pointer;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s ease,
+        /* Keep for non-image parts or fallback */
+        box-shadow 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
+    /* Added transform for subtle lift */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push header to top, details to bottom */
+    padding: 30px;
+    /* Initial padding */
+    z-index: 1;
+    /* Ensure content is above the background image container */
+
+    /* Initial state for scroll animation */
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInAndSlideUp 0.8s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+
+/* Staggered animation for blocks */
+.service-block-horizon:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-block-horizon:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-block-horizon:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-block-horizon:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.service-block-horizon:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.service-block-horizon:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+
+/* NEW: Styles for the background image container */
+.block-background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* No background-image here anymore */
+    opacity: 0;
+    /* Hidden initially */
+    transition: opacity 0.6s ease;
+    z-index: -1;
+    /* Place behind other content */
+    overflow: hidden;
+    /* Important to clip the image within */
+}
+
+/* NEW: Style the img tag within the container */
+.block-background-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+    object-position: center;
+    /* Centers the image within the container */
+    display: block;
+    /* Removes extra space below image */
+    filter: brightness(1);
+    /* Initial brightness for the image itself */
+    transition: filter 0.6s ease;
+    /* Transition for brightness change */
+}
+
+/* NEW: Dark overlay for text readability over the image */
+.block-background-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.474);
+    /* Strong dark overlay */
+    opacity: 0;
+    /* Hidden initially */
+    transition: opacity 0.6s ease;
+    z-index: 1;
+    /* Ensure overlay is above the image but below content */
+}
+
+/* NEW: Show image and overlay when service block is active */
+.service-block-horizon.active .block-background-image-container {
+    opacity: 1;
+    /* Make the container (and thus the image) visible */
+}
+
+.service-block-horizon.active .block-background-image-container::before {
+    opacity: 1;
+    /* Show the overlay */
+}
+
+/* REMOVED: Specific background images for each block from CSS */
+/*
+.block-background-image-container.bg-1 {
+    background-image: url('static/furniture1.jpg');
+}
+.block-background-image-container.bg-2 {
+    background-image: url('static/furniture2.jpg');
+}
+.block-background-image-container.bg-3 {
+    background-image: url('static/furniture3.jpg');
+}
+.block-background-image-container.bg-4 {
+    background-image: url('static/furniture4.jpg');
+}
+.block-background-image-container.bg-5 {
+    background-image: url('static/lavish_livingroom.jpg');
+}
+.block-background-image-container.bg-6 {
+    background-image: url('static/newbedroom.jpg');
+}
+*/
+
+
+/* Active state (expanded) */
+.service-block-horizon.active {
+    width: 600px;
+    /* Expanded width */
+    background-color: transparent;
+    /* Changed to transparent so image is visible */
+    border-color: #C8102E;
+    /* Highlighted border */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    /* Subtle lift */
+}
+
+/* Dimming for inactive blocks */
+.horizon-track.active-mode .service-block-horizon:not(.active) {
+    opacity: 0.4;
+    /* Dim inactive blocks */
+    filter: grayscale(50%) brightness(0.8);
+    transform: scale(0.95);
+    /* Slightly shrink inactive blocks */
+    pointer-events: none;
+    /* Disable interaction on dimmed blocks */
+}
+
+.horizon-track.active-mode .service-block-horizon:not(.active) .block-details {
+    opacity: 0;
+    /* Ensure details are hidden on inactive blocks */
+}
+
+
+.block-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align content to left */
+    text-align: left;
+    transition: transform 0.6s ease;
+    /* For header movement on active */
+    position: relative;
+    /* Ensure header content is above the image */
+    z-index: 2;
+    /* Content is above image */
+}
+
+.service-block-horizon.active .block-header {
+    transform: translateY(-20px);
+    /* Move header up when expanded */
+}
+
+.block-number {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+    /* Subtle number */
+    margin-bottom: 10px;
+    transition: color 0.4s ease;
+}
+
+.service-block-horizon.active .block-number {
+    color: rgba(255, 255, 255, 0.6);
+    /* Slightly brighter when active */
+}
+
+.block-icon {
+    font-size: 4em;
+    /* Large icon */
+    color: #C8102E;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.service-block-horizon.active .block-icon {
+    transform: scale(1.1) rotateY(10deg);
+    /* Subtle icon animation */
+    color: #fff;
+}
+
+.block-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+    white-space: normal;
+    /* Prevent wrapping initially */
+    margin-bottom: 0;
+    /* No margin here, handled by block-details top margin */
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.service-block-horizon.active .block-title {
+    color: #C8102E;
+    transform: translateY(-5px);
+    /* Lift title slightly */
+    white-space: nowrap;
+    /* Force to one line when active/expanded */
+    max-height: none;
+    /* Remove height constraint when expanded */
+    overflow: visible;
+    /* Ensure all content is visible when expanded */
+}
+
+.block-details {
+    opacity: 0;
+    /* Hidden initially */
+    max-height: 0;
+    /* For height transition */
+    overflow: hidden;
+    padding-top: 0;
+    /* No padding initially */
+    transition: opacity 0.6s ease 0.2s, max-height 0.8s ease 0.2s, padding-top 0.8s ease 0.2s;
+    text-align: left;
+    /* Align text within details */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    /* Ensure details content is above the image */
+    z-index: 2;
+    /* Content is above image */
+}
+
+.service-block-horizon.active .block-details {
+    opacity: 1;
+    max-height: 200px;
+    /* Sufficient height to show content */
+    padding-top: 20px;
+    /* Add padding when expanded */
+}
+
+.block-details p {
+    font-size: 0.95em;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-secondary-horizon {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary-horizon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #eee;
+}
+
+/* Keyframe animations for scroll-driven effects */
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAndSlideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Media Queries for Dynamic Horizon Services */
+@media (max-width: 1200px) {
+    .service-block-horizon.active {
+        width: 500px;
+        /* Slightly smaller expanded width */
+    }
+}
+
+@media (max-width: 992px) {
+    .dynamic-horizon-services {
+        padding: 80px 0;
+    }
+
+    .services-content-wrapper-horizon {
+        padding: 0 3%;
+    }
+
+    .dynamic-horizon-services h2 {
+        font-size: 2.8em;
+    }
+
+    .services-intro-horizon {
+        font-size: 1em;
+        margin-bottom: 50px;
+    }
+
+    .horizon-track {
+        flex-direction: column;
+        /* Stack blocks vertically on smaller screens */
+        gap: 30px;
+        padding-bottom: 0;
+        /* No horizontal scrollbar */
+    }
+
+    .horizon-container {
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+        /* Center the container */
+        max-width: 600px;
+        /* Limit width for stacked blocks */
+        cursor: default;
+        /* Remove grab cursor */
+    }
+
+    .horizon-container::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar on vertical stack */
+    }
+
+    .service-block-horizon {
+        width: 100%;
+        /* Full width within container */
+        height: auto;
+        /* Allow height to adjust based on content */
+        min-height: 200px;
+        /* Minimum height when collapsed */
+        padding: 25px;
+        transition: min-height 0.6s ease, background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+    }
+
+    .service-block-horizon.active {
+        min-height: 400px;
+        /* Expanded height for mobile */
+        width: 100%;
+        /* Stays full width */
+    }
+
+    /* Reset dimming/scaling for inactive blocks on mobile */
+    .horizon-track.active-mode .service-block-horizon:not(.active) {
+        opacity: 1;
+        /* No dimming */
+        filter: none;
+        /* No grayscale/brightness */
+        transform: none;
+        /* No shrinking */
+        pointer-events: auto;
+        /* Enable interaction */
+    }
+
+    .block-header {
+        flex-direction: row;
+        /* Keep icon and title in a row */
+        justify-content: flex-start;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .service-block-horizon.active .block-header {
+        transform: none;
+        /* No vertical shift on mobile */
+    }
+
+    .block-number {
+        font-size: 2.5em;
+        margin-right: 15px;
+    }
+
+    .block-icon {
+        font-size: 3.5em;
+        margin-right: 15px;
+    }
+
+    .service-block-horizon.active .block-icon {
+        transform: none;
+        /* No 3D icon animation on mobile */
+    }
+
+    .block-title {
+        font-size: 1.7em;
+        white-space: normal;
+        /* Allow title to wrap on mobile */
+    }
+
+    .service-block-horizon.active .block-title {
+        transform: none;
+        /* No vertical shift on mobile */
+    }
+
+    .block-details {
+        max-height: 0;
+        /* Keep hidden by default */
+        opacity: 0;
+        padding-top: 0;
+        transition: opacity 0.6s ease, max-height 0.8s ease;
+        /* Simplified transition */
+    }
+
+    .service-block-horizon.active .block-details {
+        opacity: 1;
+        max-height: 300px;
+        /* Sufficient height for mobile content */
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dynamic-horizon-services h2 {
+        font-size: 2.2em;
+    }
+
+    .services-intro-horizon {
+        font-size: 0.95em;
+    }
+
+    .service-block-horizon {
+        min-height: 180px;
+    }
+
+    .service-block-horizon.active {
+        min-height: 350px;
+    }
+
+    .block-number {
+        font-size: 2em;
+    }
+
+    .block-icon {
+        font-size: 3em;
+    }
+
+    .block-title {
+        font-size: 1.5em;
+    }
+
+    .block-details p {
+        font-size: 0.9em;
+    }
+
+    .btn-secondary-horizon {
+        padding: 8px 20px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .dynamic-horizon-services h2 {
+        font-size: 1.8em;
+    }
+
+    .services-intro-horizon {
+        font-size: 0.85em;
+    }
+
+    .service-block-horizon {
+        padding: 20px;
+    }
+
+    .block-number {
+        font-size: 2em;
+    }
+
+    .block-icon {
+        font-size: 2.5em;
+    }
+
+    .block-title {
+        font-size: 1.3em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="spotlight" id="spotlight"></div>
+
+    <header style="display:none"></header>
+
+    <section class="hero">
+        <div class="hero-bg-story">
+            <div class="grid-pattern"></div>
+            
+            <div class="radar-sweep"></div>
+            
+       
+      <div class="energy-rings">
+                <div class="energy-ring"></div>
+                <div class="energy-ring"></div>
+                <div class="energy-ring"></div>
+            </div>
+            
+            <div class="security-shields">
+      
+           <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                </svg>
+                <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                
+     <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                </svg>
+                <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                </svg>
+        
+         <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                </svg>
+                <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  
+   <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                </svg>
+            </div>
+            
+            <div class="digital-rain" id="digitalRain"></div>
+        </div>
+        
+        <div class="container hero-content parallax-element">
+           
+  <div class="hero-brand">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+                        
+ <path d="M8.5 13h7M12 7l3.5 9M12 7L8.5 16"/>
+                    </svg>
+                </div>
+                ALPHA ONE
+            </div>
+            <h1>Safety.
+ <span style="color:var(--red)">On-Demand.</span></h1>
+            <p>Your elite marketplace for private security and concierge protection.
+ Verified professionals, seamless booking, and absolute discretion.</p>
+            <button class="btn primary" onclick="document.querySelector('#waitlist').scrollIntoView({behavior:'smooth'});">
+                Get Early Access
+            </button>
+        </div>
+    </section>
+
+    <section class="form-section" id="waitlist">
+        <div class="form-card">
+            <div class="form-header">
+         
+         <h2>Join the Waitlist</h2>
+                <p style="color:var(--soft);font-size:0.95rem;margin-top:.4rem">We're onboarding a limited, invite-only cohort.
+ First access gets the best deals.</p>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <form id="waitlistForm">
+                
+ <div class="form-step active" data-step="1">
+                    <div class="field">
+                        <label for="fullName">What's your full name?</label>
+                        <input id="fullName" name="name" type="text" autocomplete="name" required placeholder="Your full name" />
+               
+           </div>
+                    <div class="field">
+                        <label for="city">Which city are you in?</label>
+                        <input id="city" name="city" type="text" autocomplete="address-level2" required placeholder="e.g., Mumbai, New Delhi" />
+           
+          </div>
+                    <div class="form-actions">
+                        <button class="btn primary next-step">Next</button>
+                    </div>
+                </div>
+
+       
+          <div class="form-step" data-step="2">
+                    <div class="field">
+                        <label for="email">What's your best email address?</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        
+             </div>
+                    <div class="field">
+                        <label for="phone">And your phone number?</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91 98xxxxxxx" />
+       
+              </div>
+                    <div class="form-actions">
+                        <button class="btn primary next-step">Next</button>
+                    </div>
+                </div>
+
+   
+              <div class="form-step" data-step="3">
+                    <div class="field">
+                        <label for="role">How would you use Alpha One?</label>
+                        <select id="role" name="role" required>
+       
+                       <option value="" disabled selected>I am...</option>
+                            <option value="client">Seeking Security Services</option>
+                            <option value="agency">A Security Agency Partner</option>
+            
+             </select>
+                    </div>
+                    <div class="field" id="needField" style="display:none">
+                        <label for="need">What's your primary need?</label>
+                 
+         <select id="need" name="need" required>
+                            <option value="" disabled selected>Select a need</option>
+                        </select>
+                    </div>
+             
+         <div class="form-actions">
+                        <button class="btn primary next-step">Next</button>
+                    </div>
+                </div>
+                
+             
+      <div class="form-step" data-step="4">
+                    <div class="field">
+                        <label for="notes">Anything else we should know?
+ (Optional)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Timeline, specific requirements, sensitivities..."></textarea>
+                    </div>
+                    <div class="consent">
+                        <input type="checkbox" id="consent" required 
+ />
+                        <label for="consent" class="consent-text">I agree to be contacted by Alpha One and consent to secure storage of my details as per the <a href="#" onclick="openPolicy(event)">Privacy Policy</a>.</label>
+                    </div>
+                    <div class="form-actions">
+           
+              <button class="btn primary" type="submit">Submit Request</button>
+                    </div>
+                </div>
+            </form>
+            <div id="formErrors" class="error-message"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+<section class="dynamic-horizon-services">
+    <div class="services-background-overlay"></div>
+    <div class="services-content-wrapper-horizon">
+        <h2 id="services">Our Dynamic Services Horizon</h2>
+        <p class="services-intro-horizon">
+            Explore our comprehensive range of services, meticulously crafted to bring your architectural and design visions to life.
+            Each solution is a testament to our expertise and commitment to excellence.
+        </p>
+
+        <div class="horizon-container">
+            <div class="horizon-track">
+
+                <div class="service-block-horizon" id="service-horizon-1">
+                    <div class="block-background-image-container">
+                        <img src="static/interior_design.jpg" alt="Interior Design" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">01</span>
+                        <div class="block-icon">&#9728;</div> <h3 class="block-title">Interior Design</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Crafting aesthetically pleasing and highly functional interiors that reflect your unique style. From conceptualization to the final touches, we create spaces that inspire and enhance living or working environments.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-block-horizon" id="service-horizon-2">
+                    <div class="block-background-image-container">
+                        <img src="static/architectural_plan.png" alt="Architectural Planning" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">02</span>
+                        <div class="block-icon">&#9731;</div> <h3 class="block-title">Architectural Planning</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Innovative and sustainable architectural solutions for new constructions, renovations, and extensions. Our designs prioritize functionality, beauty, and structural integrity, laying the foundation for lasting spaces.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-block-horizon" id="service-horizon-3">
+                    <div class="block-background-image-container">
+                        <img src="static/construction_management.jpg" alt="Construction Management" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">03</span>
+                        <div class="block-icon">&#128736;</div> <h3 class="block-title">Construction Management</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Overseeing every phase of your project, ensuring timely delivery, budget adherence, and the highest quality standards. We bring unparalleled efficiency and expertise to every complex build, from groundbreaking to handover.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-block-horizon" id="service-horizon-4">
+                    <div class="block-background-image-container">
+                        <img src="static/landscape_design.jpg" alt="Landscape Design" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">04</span>
+                        <div class="block-icon">&#8962;</div> <h3 class="block-title">Landscape Design</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Designing breathtaking outdoor spaces that seamlessly complement your property and provide tranquil, functional, and beautiful environments for relaxation and entertainment.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-block-horizon" id="service-horizon-5">
+                    <div class="block-background-image-container">
+                        <img src="static/lavish_livingroom.jpg" alt="Smart Home Integration" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">05</span>
+                        <div class="block-icon"><i class="fa-solid fa-lightbulb"></i></div> <h3 class="block-title">Smart Home Integration</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Integrating cutting-edge smart home technologies for enhanced convenience, security, and energy efficiency. Control your environment with intelligent automation systems tailored to your lifestyle.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="service-block-horizon" id="service-horizon-6">
+                    <div class="block-background-image-container">
+                        <img src="static/newbedroom.jpg" alt="Space Optimization" fetchpriority="low" decoding="sync" loading="lazy">
+                    </div>
+                    <div class="block-header">
+                        <span class="block-number">06</span>
+                        <div class="block-icon"> <i class="fa-solid fa-expand-arrows-alt"></i> </div> <h3 class="block-title">Space Optimization</h3>
+                    </div>
+                    <div class="block-details">
+                        <p>Maximizing the utility and aesthetic appeal of limited spaces. Our clever design solutions make the most of every square foot, creating versatile, efficient, and surprisingly open areas.</p>
+                        <a href="#" class="btn secondary-btn-horizon">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="footer-cta container">
+   
+          <div>
+                <h3>Want to partner with us?</h3>
+                <p>Register as a security agency to get pre-qualified client leads.</p>
+            </div>
+            <button class="btn ghost" onclick="jumpToAgencyForm();">Register as Agency</button>
+        </div>
+    </section>
+
+    <section 
+ class="form-section confirmation" id="confirmationPage" style="display: none;">
+        <div class="container confirmation">
+            <div class="success-animation">
+                <div class="bg-circle"></div>
+                <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3l7 3v6c0 5-3.4 8.5-7 9-3.6-.5-7-4-7-9V6l7-3z"/>
+      
+               <path class="check" d="M8 12.5l3 3 5.5-5.5"/>
+                </svg>
+            </div>
+            <h2>🎉 Success!</h2>
+            <p>Your request has been received.
+ We'll be in touch with you shortly to grant early access and discuss your needs.
+ Welcome to Alpha One.</p>
+            <a class="btn primary" href="#waitlist" onclick="resetForm(event)">Join another waitlist member?</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container foot">
+            <div>© <span id="y"></span> Alpha One</div>
+            <div style="display:flex;gap:1rem">
+                <a href="#" onclick="openPolicy(event)">Privacy & Terms</a>
+   
+          </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="policyModal" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+        <div class="sheet">
+            <h3 id="policyTitle" style="margin-top:0">Privacy & Terms</h3>
+            <p class="muted">We collect your submitted details solely to evaluate and fulfill security requests or agency onboarding.
+ Data is stored securely and never sold. You can request deletion at any time via <a href="mailto:contact@getalphaone.com">contact@getalphaone.com</a>.</p>
+            <div style="display:flex;justify-content:flex-end;margin-top:1rem"><button class="btn primary" onclick="closePolicy()">Close</button></div>
+        </div>
+    </div>
+    
+    <script>
+        // Helpers
+        const $ = (q, el = document) => el.querySelector(q);
+ const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
+
+        // Year
+        $('#y').textContent = new Date().getFullYear();
+ // 1. Mouse Follower Spotlight
+        const spotlight = $('#spotlight');
+ let mouseX = 0, mouseY = 0;
+        let spotlightX = 0, spotlightY = 0;
+ document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+ function updateSpotlight() {
+            const dx = mouseX - spotlightX;
+ const dy = mouseY - spotlightY;
+            
+            spotlightX += dx * 0.1;
+            spotlightY += dy * 0.1;
+ spotlight.style.transform = `translate(${spotlightX - 200}px, ${spotlightY - 200}px)`;
+            requestAnimationFrame(updateSpotlight);
+        }
+        updateSpotlight();
+ // 2. Digital Rain Effect
+        const digitalRainContainer = $('#digitalRain');
+        const characters = '01ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ';
+ const columns = Math.floor(window.innerWidth / 20);
+
+        function createRainColumn(leftPos) {
+            const column = document.createElement('div');
+ column.className = 'rain-column';
+            column.style.left = `${leftPos}px`;
+            
+            let text = '';
+ for (let j = 0; j < 20; j++) {
+                text += characters[Math.floor(Math.random() * characters.length)] + '<br>';
+ }
+            column.innerHTML = text;
+            digitalRainContainer.appendChild(column);
+ column.addEventListener('animationend', () => {
+                if (column.parentNode) {
+                    digitalRainContainer.removeChild(column);
+                }
+                setTimeout(() => {
+                    createRainColumn(leftPos);
+     
+            }, Math.random() * 5000);
+            });
+ }
+
+        for (let i = 0; i < columns; i++) {
+            setTimeout(() => createRainColumn(i * 20), Math.random() * 8000);
+ }
+
+        // 3. Parallax Scrolling Effects
+        let ticking = false;
+ function updateParallax() {
+            const scrolled = window.pageYOffset;
+ const parallaxElements = $$('.parallax-element');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            });
+ const radarSweep = $('.radar-sweep');
+            if (radarSweep) {
+                const speedMultiplier = 1 + (scrolled * 0.001);
+ radarSweep.style.animationDuration = `${6 / speedMultiplier}s`;
+            }
+            
+            ticking = false;
+ }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+ ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+ // 4. Interactive Button Hover Effects
+        $$('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function(e) {
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+               
+  ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = '50%';
+                ripple.style.top = '50%';
+     
+            ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                ripple.style.marginLeft = '-10px';
+                ripple.style.marginTop = '-10px';
+                
+                this.appendChild(ripple);
+ 
+                
+                setTimeout(() => {
+                    if (ripple.parentNode) {
+                        ripple.parentNode.removeChild(ripple);
+ }
+                }, 600);
+            });
+        });
+ const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+ opacity: 0;
+                }
+            }
+        `;
+ document.head.appendChild(rippleStyle);
+        
+        // 5. Form Field Focus Animations
+        $$('input, select, textarea').forEach(field => {
+            field.addEventListener('focus', function() {
+                this.parentNode.style.transform = 'scale(1.02)';
+                this.parentNode.style.transition = 'transform 0.2s ease';
+            });
+            
+      
+          field.addEventListener('blur', function() {
+                this.parentNode.style.transform = 'scale(1)';
+            });
+        });
+ // Multi-step form logic
+        const form = $('#waitlistForm');
+        const formCard = $('.form-card');
+ const steps = $$('.form-step');
+        const progress = $('.progress');
+        let currentStep = 0;
+        const totalSteps = steps.length;
+ const clientNeeds = `
+            <option value="" disabled selected>Select a need</option>
+            <option>Concierge Airport Transfer</option>
+            <option>Close Protection</option>
+            <option>Event Security</option>
+            <option>Armed Bodyguards</option>
+            <option>Unarmed Bodyguards</option>
+            <option>Luxury Transport</option>
+ 
+            <option>Enterprise Security</option>
+            <option>Other</option>`;
+ const agencyNeeds = `
+            <option value="" disabled selected>Select a need</option>
+            <option>Agency Onboarding</option>
+            <option>Compliance & Payroll Suite</option>
+            <option>Attendance & Deployment</option>
+            <option>Leads & Bookings</option>
+            <option>Other</option>`;
+ function updateProgress() {
+            const width = ((currentStep + 1) / totalSteps) * 100;
+ progress.style.width = `${width}%`;
+        }
+
+        function validateStep(stepIndex) {
+            const step = steps[stepIndex];
+ const inputs = $$('input[required], select[required], textarea[required]', step);
+            for (const input of inputs) {
+                if (!input.value.trim() || !input.checkValidity()) {
+                    return false;
+ }
+            }
+            if (stepIndex === 3 && !$('#consent').checked) {
+                return false;
+ }
+            return true;
+ }
+
+        function nextStep(event) {
+            event.preventDefault();
+ if (!validateStep(currentStep)) {
+                $('#formErrors').textContent = 'Please fill out all required fields to continue.';
+ formCard.style.animation = 'shake 0.5s ease-in-out';
+                setTimeout(() => {
+                    formCard.style.animation = '';
+                }, 500);
+ return;
+            }
+            $('#formErrors').textContent = '';
+            steps[currentStep].classList.add('anim-out');
+ setTimeout(() => {
+                steps[currentStep].classList.remove('active', 'anim-out');
+                currentStep++;
+                if (currentStep < totalSteps) {
+                    steps[currentStep].classList.add('active');
+                    updateProgress();
+     
+            }
+            }, 500);
+ }
+
+        function submitForm(event) {
+            event.preventDefault();
+ const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+            payload.created_at = new Date().toISOString();
+            console.log('[AlphaOne] Submission:', payload);
+            formCard.style.display = 'none';
+ $('#confirmationPage').style.display = 'flex';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetForm(event) {
+            event?.preventDefault();
+ form.reset();
+            formCard.style.display = 'block';
+            $('#confirmationPage').style.display = 'none';
+            steps[currentStep].classList.remove('active');
+            currentStep = 0;
+            steps[0].classList.add('active');
+            updateProgress();
+            $('#formErrors').textContent = '';
+            $('#needField').style.display = 'none';
+ $('#role').value = '';
+        }
+
+        function jumpToAgencyForm() {
+            resetForm();
+ setTimeout(() => {
+                $('#role').value = 'agency';
+                $('#role').dispatchEvent(new Event('change'));
+                $('#waitlist').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+ }
+
+        form.addEventListener('submit', submitForm);
+ $$('.next-step').forEach(btn => {
+            btn.addEventListener('click', nextStep);
+        });
+ $('#role').addEventListener('change', (e) => {
+            const needField = $('#needField');
+            const needSelect = $('#need');
+            if (e.target.value === 'agency') {
+                needSelect.innerHTML = agencyNeeds;
+                needField.style.display = 'block';
+            } else if 
+ (e.target.value === 'client') {
+                needSelect.innerHTML = clientNeeds;
+                needField.style.display = 'block';
+            } else {
+                needField.style.display = 'none';
+            }
+        });
+ function openPolicy(evt) {
+            evt?.preventDefault();
+            $('#policyModal').classList.add('open');
+ }
+        function closePolicy() {
+            $('#policyModal').classList.remove('open');
+ }
+        window.openPolicy = openPolicy;
+        window.closePolicy = closePolicy;
+
+        const shakeStyle = document.createElement('style');
+ shakeStyle.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0);
+ }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px);
+ }
+                20%, 40%, 60%, 80% { transform: translateX(5px);
+ }
+            }
+        `;
+ document.head.appendChild(shakeStyle);
+
+        // Initialize progress
+        updateProgress();
+
+        const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+ if (isLowEndDevice) {
+            document.documentElement.style.setProperty('--animation-duration', '1s');
+ }
+    </script>
+
+
+
+
+
+
+
+<script>
+
+
+// --- NEW: Dynamic Horizon Services Interaction Logic ---
+    const horizonBlocks = document.querySelectorAll('.service-block-horizon');
+    const horizonTrack = document.querySelector('.horizon-track');
+
+    // Function to set an active block
+    const setActiveBlock = (blockToActivate) => {
+        horizonTrack.classList.add('active-mode'); // Enable dimming for others
+        horizonBlocks.forEach(block => {
+            if (block === blockToActivate) {
+                block.classList.add('active');
+            } else {
+                block.classList.remove('active');
+            }
+        });
+    };
+
+    // Function to reset all blocks
+    const resetBlocks = () => {
+        horizonTrack.classList.remove('active-mode'); // Disable dimming
+        horizonBlocks.forEach(block => {
+            block.classList.remove('active');
+        });
+    };
+
+    // Desktop: Hover interaction
+    if (window.innerWidth > 992) {
+        horizonBlocks.forEach(block => {
+            block.addEventListener('mouseenter', () => setActiveBlock(block));
+            block.addEventListener('mouseleave', () => resetBlocks());
+        });
+    }
+    // Mobile/Tablet: Click interaction
+    else {
+        horizonBlocks.forEach(block => {
+            block.addEventListener('click', () => {
+                // If clicking an already active block, deactivate it
+                if (block.classList.contains('active')) {
+                    resetBlocks();
+                } else {
+                    setActiveBlock(block);
+                }
+            });
+        });
+    }
+
+    // Handle resize to switch between hover/click behavior and reset state
+    window.addEventListener('resize', () => {
+        // Reset all active states on resize to prevent weird transitions
+        resetBlocks();
+
+        // Remove all previous event listeners to prevent duplicates
+        horizonBlocks.forEach(block => {
+            block.removeEventListener('mouseenter', () => setActiveBlock(block));
+            block.removeEventListener('mouseleave', () => resetBlocks());
+            block.removeEventListener('click', () => { /* handler */ }); // Need to replicate the exact handler to remove
+        });
+
+        // Re-add event listeners based on new window size
+        if (window.innerWidth > 992) {
+            horizonBlocks.forEach(block => {
+                block.addEventListener('mouseenter', () => setActiveBlock(block));
+                block.addEventListener('mouseleave', () => resetBlocks());
+            });
+        } else {
+            horizonBlocks.forEach(block => {
+                block.addEventListener('click', function clickHandler() { // Named function to remove later
+                    if (this.classList.contains('active')) {
+                        resetBlocks();
+                    } else {
+                        setActiveBlock(this);
+                    }
+                });
+            });
+        }
+    });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
