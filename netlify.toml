@@ -1,0 +1,6 @@
+[build]
+  publish = "."                 # root has index.html
+  functions = "netlify/functions"
+
+[dev]
+  functions = "netlify/functions"
