@@ -1988,16 +1988,43 @@
             }, 500);
  }
 
-        function submitForm(event) {
-            event.preventDefault();
- const formData = new FormData(form);
-            const payload = Object.fromEntries(formData.entries());
-            payload.created_at = new Date().toISOString();
-            console.log('[AlphaOne] Submission:', payload);
-            formCard.style.display = 'none';
- $('#confirmationPage').style.display = 'flex';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+
+
+        
+async function submitForm(event) {
+  event.preventDefault();
+  const form = document.querySelector('#waitlistForm');
+  const formCard = document.querySelector('.form-card');
+  const errorsEl = document.querySelector('#formErrors');
+
+  const formData = new FormData(form);
+  const payload = Object.fromEntries(formData.entries());
+
+  try {
+    const res = await fetch('/.netlify/functions/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Server error');
+
+    // show confirmation (your existing UI)
+    formCard.style.display = 'none';
+    document.querySelector('#confirmationPage').style.display = 'flex';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } catch (err) {
+    errorsEl.textContent = 'Submission failed: ' + err.message;
+    formCard.style.animation = 'shake 0.5s ease-in-out';
+    setTimeout(()=> formCard.style.animation = '', 500);
+  }
+}
+
+
+
+        
+
 
         function resetForm(event) {
             event?.preventDefault();
@@ -2172,6 +2199,7 @@
 
 </body>
 </html>
+
 
 
 
